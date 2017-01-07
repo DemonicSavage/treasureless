@@ -6,10 +6,6 @@ visited_b = false;
 is_started = false;
 keep_theres_options = true;
 
-function treasure:text_render( )
-  Isaac.RenderText("Treasureless v0.0.9", 50, 15, 255, 255, 255, 255);
-end
-
 function treasure:activate_treasureless( )
   game = Game();
   local player = game:GetPlayer(0);
@@ -55,5 +51,4 @@ function treasure:activate_treasureless( )
   end
 end
 
-treasure:AddCallback( ModCallbacks.MC_POST_RENDER, treasure.text_render );
 treasure:AddCallback( ModCallbacks.MC_POST_UPDATE, treasure.activate_treasureless );
