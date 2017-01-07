@@ -1,25 +1,26 @@
-require('mobdebug').start()
-local treasure = RegisterMod("Treasureless", 1);
+require('mobdebug').start();
+local treasure = RegisterMod("Treasureless", 2);
 
 visited_t = false;
 visited_b = false;
-floor = nil;
+is_started = false;
 keep_theres_options = true;
 
-stage = 0
-
 function treasure:text_render( )
-  Isaac.RenderText("Treasureless v0.0.8.1", 50, 15, 255, 255, 255, 255);
+  Isaac.RenderText("Treasureless v0.0.9", 50, 15, 255, 255, 255, 255);
 end
 
 function treasure:activate_treasureless( )
   game = Game();
   local player = game:GetPlayer(0);
+  floor = game:GetLevel();
+  stage = floor:GetAbsoluteStage();
 
-  if floor == nil then
+  if stage == 1 and is_started == false then
     Isaac.DebugString("is_started");
-    floor = game:GetLevel();
-    stage = floor:GetAbsoluteStage();
+    is_started = true;
+    visited_t = false;
+    visited_b = false;
   end
 
   if stage < floor:GetAbsoluteStage() then
