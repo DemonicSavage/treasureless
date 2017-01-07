@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <name>Treasureless</name>
+    <directory>treasureless</directory>
+    <id>835231418</id>
+    <description>This is a WIP mod, it currently has a lot of problems.
+This mod makes it so when you access the boss room before any treasure room, it'll give you the There's Options item temporarily.
+I only made this to get acquainted to the mod tools and API. This mod isn't any good.
+There is a much better version called Treasureless NG, use that instead.</description>
+    <version>0.0.9.3</version>
+    <visibility>Public</visibility>
+    <tag id="Tweaks"/>
+</metadata>
